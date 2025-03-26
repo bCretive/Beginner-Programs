@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel Counter</title>
+</head>
+<body>
+<script>
+    function countVowels(str) {
+        // Using a regular expression to count vowels in a more concise way
+        let count = (str.match(/[aeiou]/gi) || []).length;
+        
+        // Displaying result in the body
+        document.body.innerHTML = `
+            <h1>Welcome to the Vowel Counter</h1>
+            <p>There are <b>${count}</b> vowels in <b>${str}</b>.</p>
+        `;
+    }
+
+    countVowels(prompt('Enter a word or sentence to count the number of vowels:'));
+</script>
+</body>
+</html>
