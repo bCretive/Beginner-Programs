@@ -1,0 +1,48 @@
+/* The main calculator container */
+        .calculator {
+            border: 2px solid black;
+            width: 220px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Grid layout to arrange buttons in rows and columns */
+        .btns {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 5px;
+        }
+
+        /* Styling for calculator buttons */
+        .btn {
+            height: 50px;
+            font-size: 1.2em;
+            border: 1px solid black;
+            background-color: lightgrey;
+            cursor: pointer;
+        }
+
+        /* Special styling for the 'Clear' button */
+        .clearDisplay {
+            background-color: orange;
+        }
+
+        /* Special styling for the '=' button */
+        .result {
+            background-color: white;
+        }
+
+        /* Input field for displaying entered numbers and results */
+        #display {
+            width: 98%; /* Slightly reduced width to avoid overflow */
+            height: 50px;
+            text-align: right; /* Align text to the right */
+            font-size: 1.5em; /* Large font for better visibility */
+            padding: 5px;
+            background-color: lightgrey;
+            border: none;
+            white-space: nowrap; /* Prevents text from wrapping */
+            overflow: hidden; /* Hides overflowing content */
+            text-overflow: ellipsis; /* Displays '...' if text overflows */
+            box-sizing: border-box; /* Ensures width includes padding */
+        }
