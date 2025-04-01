@@ -1,0 +1,59 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+h1{
+  text-align: center;
+  height: 10vh;
+}
+#game{
+  background-color: #7D84D1;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+}
+#ttt {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+button {
+    min-height: 4em;
+    min-width: 5em;
+    font-size: 1.5em;
+    text-align: center;
+}
+#reset {
+    width: 150px;
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+}
+.btn {
+    min-height: 2em;
+    min-width: 2em;
+    background-color: white;
+    border: 1px solid black;
+    font-size: 65px;
+}
+.show{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  height: 90vh;
+  min-width: 100%;
+  background-color: black;
+  color: white;
+}
+#newGame{
+  width: 150px;
+}
+.hidden{
+  display: none;
+}
+#gameWonBy{
+  font-size: 50px;
+}
