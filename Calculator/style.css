@@ -1,6 +1,10 @@
+*{
+ border-radius: 50%;
+}
 /* The main calculator container */
         .calculator {
             border: 2px solid black;
+            border-radius: 1em;
             width: 220px;
             padding: 10px;
             text-align: center;
@@ -40,7 +44,7 @@
             font-size: 1.5em; /* Large font for better visibility */
             padding: 5px;
             background-color: lightgrey;
-            border: none;
+            border-radius: 1em;
             white-space: nowrap; /* Prevents text from wrapping */
             overflow: hidden; /* Hides overflowing content */
             text-overflow: ellipsis; /* Displays '...' if text overflows */
