@@ -1,37 +1,40 @@
-        let display = document.getElementById('display'); // Gets the display element
-        let calculator = document.querySelector('.btns'); // Selects the button container
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    </head>
+<body>
+    <h1>Welcome to Basic Calculator!</h1>
 
-        // Event listener for button clicks using event delegation
-        calculator.addEventListener('click', (event) => {
-            // Checks if the clicked element is actually a button
-            if (!event.target.classList.contains('btn')) return;
-            
-            const value = event.target.textContent; // Gets the button's text
+    <!-- The calculator container -->
+    <div class="calculator">
+        <!-- Input field to display user input and results -->
+        <input type="text" id="display" readonly>
 
-            // If 'C' is clicked, clear the display
-            if (value === 'C') {
-                display.value = '';
-            }
-            // If '=' is clicked, evaluate the entered mathematical expression
-            else if (value === '=') {
-                try {
-                    display.value = eval(display.value); // Evaluates the expression safely
-                } catch {
-                    display.value = 'Error'; // Displays 'Error' for invalid inputs
-                }
-            }
-            // Otherwise, append the clicked button's value to the display
-            else {
-                display.value += value;
-                adjustFontSize(); // Adjust font size dynamically
-            }
-        });
+        <!-- Buttons container -->
+        <div class="btns">
+            <!-- Number and operator buttons -->
+            <button class="btn">7</button>
+            <button class="btn">8</button>
+            <button class="btn">9</button>
+            <button class="btn">/</button>
+            <button class="btn">4</button>
+            <button class="btn">5</button>
+            <button class="btn">6</button>
+            <button class="btn">*</button>
+            <button class="btn">1</button>
+            <button class="btn">2</button>
+            <button class="btn">3</button>
+            <button class="btn">+</button>
+            <button class="btn clearDisplay">C</button>
+            <button class="btn">0</button>
+            <button class="btn result">=</button>
+            <button class="btn">-</button>
+        </div>
+    </div>
 
-        // Function to reduce font size when input gets too long
-        function adjustFontSize() {
-            if (display.value.length > 10) {
-                display.style.fontSize = "1.2em"; // Decrease font size
-            } else {
-                display.style.fontSize = "1.5em"; // Reset to default font size
-            }
-        }
+    <script src="script.js" type="text/javascript" charset="utf-8"></script>
+</body>
+  </html>
